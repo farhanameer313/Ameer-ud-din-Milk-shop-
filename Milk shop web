@@ -1,0 +1,426 @@
+```html
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>امیر الدین ملک شاپ اور ناشتہ پوائنٹ</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Noto Nastaliq Urdu -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        nastaliq: ['"Noto Nastaliq Urdu"', 'serif'],
+                    },
+                    colors: {
+                        dairy: {
+                            50: '#FFFBF0',
+                            100: '#FFF8E1',
+                            200: '#FFECB3',
+                            300: '#FFE082',
+                            800: '#FFA000',
+                            900: '#FF8F00',
+                        },
+                        cream: '#FDFBF7',
+                        gold: '#D4AF37'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            background-color: #FDFBF7;
+            line-height: 2.2;
+        }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.9));
+        }
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .btn-primary {
+            background-color: #D4AF37;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #B5952F;
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            border: 2px solid #D4AF37;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background-color: #D4AF37;
+            color: white;
+        }
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2 space-x-reverse">
+                <i class="fas fa-cow text-dairy-800 text-3xl"></i>
+                <h1 class="text-xl md:text-2xl font-bold text-gray-800">امیر الدین ملک شاپ</h1>
+            </div>
+            
+            <div class="hidden md:flex space-x-6 space-x-reverse text-lg">
+                <a href="#home" class="hover:text-dairy-800 transition">ہوم</a>
+                <a href="#menu" class="hover:text-dairy-800 transition">مینو</a>
+                <a href="#contact" class="hover:text-dairy-800 transition">رابطہ</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-800 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <a href="#home" class="block py-3 px-4 hover:bg-dairy-50 border-b border-gray-100">ہوم</a>
+            <a href="#menu" class="block py-3 px-4 hover:bg-dairy-50 border-b border-gray-100">مینو</a>
+            <a href="#contact" class="block py-3 px-4 hover:bg-dairy-50">رابطہ</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center pt-16">
+        <div class="absolute inset-0 z-0">
+            <img src="https://image.qwenlm.ai/public_source/1e088336-9174-42eb-a174-686a1197c030/18541e905-94b9-422d-8045-cbcbc8fbe720.png" alt="Shop Interior" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 z-10 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-dairy-100 text-dairy-900 text-sm font-bold mb-4 border border-dairy-300">
+                <i class="fas fa-star text-yellow-500 ml-1"></i> 25+ سال کا تجربہ
+            </span>
+            <h2 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                خالص دودھ، دہی اور<br>
+                <span class="text-dairy-800">ذائقہ دار دیسی ناشتہ</span>
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto">
+                دھولانوال، لاہور میں اعتماد اور معیار کا نام۔ صبح کی شروعات صحت مند اور لذیذ ناشتے سے کریں۔
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#menu" class="btn-primary px-8 py-3 rounded-lg text-lg font-bold shadow-lg">
+                    مینو دیکھیں
+                </a>
+                <a href="https://wa.me/923280564431" class="btn-outline px-8 py-3 rounded-lg text-lg font-bold bg-white shadow-lg">
+                    <i class="fab fa-whatsapp ml-2"></i> اب آرڈر کریں
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 rounded-xl bg-dairy-50 border border-dairy-200">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-dairy-800 text-2xl">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">خالص اور تازہ</h3>
+                    <p class="text-gray-600">ہمارے تمام ڈیری پروڈکٹس 100% خالص اور روزانہ تازہ ہوتے ہیں۔</p>
+                </div>
+                <div class="p-6 rounded-xl bg-dairy-50 border border-dairy-200">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-dairy-800 text-2xl">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">جب تک دکان کھلی ہو</h3>
+                    <p class="text-gray-600">ہم صبح سویرے سے لے کر دیر تک آپ کی خدمت کے لیے موجود ہیں۔</p>
+                </div>
+                <div class="p-6 rounded-xl bg-dairy-50 border border-dairy-200">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm text-dairy-800 text-2xl">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">اعتماد کا رشتہ</h3>
+                    <p class="text-gray-600">پچھلے 25 سال سے دھولانوال کے عوام کا بھروسہ ہماری پہچان ہے۔</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-dairy-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">ہمارا مینو</h2>
+                <div class="w-24 h-1 bg-dairy-800 mx-auto rounded"></div>
+                <p class="mt-4 text-gray-600 text-lg">ذائقے دار اور معیاری کھانے، بہترین قیمتوں پر</p>
+            </div>
+
+            <!-- Dairy Products -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 border-r-4 border-dairy-800 pr-4">ڈیری مصنوعات</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Milk -->
+                    <div class="bg-white rounded-xl overflow-hidden card-shadow hover:shadow-xl transition duration-300">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://image.qwenlm.ai/public_source/1e088336-9174-42eb-a174-686a1197c030/1f4f2df80-b7af-4d8a-a956-04fc9cc63e91.png" alt="Milk" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-2xl font-bold text-gray-900">دودھ (Milk)</h4>
+                                <span class="text-xl font-bold text-dairy-800">180 روپے / کلو</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">بالکل تازہ، گاڑھا اور خالص دودھ۔</p>
+                            <a href="https://wa.me/923280564431?text=I%20want%20to%20order%20Milk" class="block w-full text-center py-2 bg-gray-100 hover:bg-gray-200 rounded text-gray-800 font-bold transition">
+                                آرڈر کریں
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Dahi -->
+                    <div class="bg-white rounded-xl overflow-hidden card-shadow hover:shadow-xl transition duration-300">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://image.qwenlm.ai/public_source/1e088336-9174-42eb-a174-686a1197c030/1f15ff4d2-b47b-4e0c-8cac-c70b2caee9ce.png" alt="Dahi" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-2xl font-bold text-gray-900">دہی (Dahi)</h4>
+                                <span class="text-xl font-bold text-dairy-800">240 روپے / کلو</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">گاڑھا دیسی دہی، ناشتے کے ساتھ بہترین۔</p>
+                            <a href="https://wa.me/923280564431?text=I%20want%20to%20order%20Dahi" class="block w-full text-center py-2 bg-gray-100 hover:bg-gray-200 rounded text-gray-800 font-bold transition">
+                                آرڈر کریں
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Breakfast Specials -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 border-r-4 border-dairy-800 pr-4">صبح کا ناشتہ</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Chane -->
+                    <div class="bg-white rounded-xl overflow-hidden card-shadow group">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://image.qwenlm.ai/public_source/1e088336-9174-42eb-a174-686a1197c030/164f8bffc-d87a-4267-9b5d-a4d225fbedfd.png" alt="Chane" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-5">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">کھوے والے چنے</h4>
+                            <div class="flex justify-between text-gray-700 mb-3">
+                                <span>فول پلیٹ</span>
+                                <span class="font-bold">240 روپے</span>
+                            </div>
+                            <div class="flex justify-between text-gray-700 mb-4">
+                                <span>ہاف پلیٹ</span>
+                                <span class="font-bold">120 روپے</span>
+                            </div>
+                            <a href="https://wa.me/923280564431?text=Order%20Chane" class="block w-full text-center py-2 border border-dairy-800 text-dairy-800 hover:bg-dairy-800 hover:text-white rounded transition">آرڈر کریں</a>
+                        </div>
+                    </div>
+
+                    <!-- Haleem -->
+                    <div class="bg-white rounded-xl overflow-hidden card-shadow group">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://image.qwenlm.ai/public_source/1e088336-9174-42eb-a174-686a1197c030/11f66a78e-883b-4c92-a8a4-d8c0d7383742.png" alt="Haleem" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-5">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">حلیم</h4>
+                            <div class="flex justify-between text-gray-700 mb-3">
+                                <span>فول پلیٹ</span>
+                                <span class="font-bold">220 روپے</span>
+                            </div>
+                            <div class="flex justify-between text-gray-700 mb-4">
+                                <span>ہاف پلیٹ</span>
+                                <span class="font-bold">110 روپے</span>
+                            </div>
+                            <a href="https://wa.me/923280564431?text=Order%20Haleem" class="block w-full text-center py-2 border border-dairy-800 text-dairy-800 hover:bg-dairy-800 hover:text-white rounded transition">آرڈر کریں</a>
+                        </div>
+                    </div>
+
+                    <!-- Bong Paye -->
+                    <div class="bg-white rounded-xl overflow-hidden card-shadow group">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://image.qwenlm.ai/public_source/1e088336-9174-42eb-a174-686a1197c030/199b27271-755a-4a4f-80b2-79300a6add73.png" alt="Paye" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-5">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">بون پائے</h4>
+                            <div class="flex justify-between text-gray-700 mb-3">
+                                <span>فول پیالہ</span>
+                                <span class="font-bold">500 روپے</span>
+                            </div>
+                            <div class="flex justify-between text-gray-700 mb-4">
+                                <span>ہاف پیالہ</span>
+                                <span class="font-bold">250 روپے</span>
+                            </div>
+                            <a href="https://wa.me/923280564431?text=Order%20Paye" class="block w-full text-center py-2 border border-dairy-800 text-dairy-800 hover:bg-dairy-800 hover:text-white rounded transition">آرڈر کریں</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ramzan Specials -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 border-r-4 border-dairy-800 pr-4">رمضان اسپیشل & اسنیکس</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Samosa -->
+                    <div class="flex flex-col md:flex-row bg-white rounded-xl overflow-hidden card-shadow">
+                        <div class="md:w-1/3 h-48 md:h-auto">
+                            <img src="https://image.qwenlm.ai/public_source/1e088336-9174-42eb-a174-686a1197c030/130d9990c-58f6-44cf-9e98-33f119045796.png" alt="Samosa" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xl font-bold text-gray-900">آلو والا سموسہ</h4>
+                                <span class="text-lg font-bold text-dairy-800">60 روپے</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">کرارا اور ذائقہ دار۔</p>
+                            <a href="https://wa.me/923280564431?text=Order%20Samosa" class="self-start px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded text-sm font-bold transition">آرڈر کریں</a>
+                        </div>
+                    </div>
+
+                    <!-- Kachori -->
+                    <div class="flex flex-col md:flex-row bg-white rounded-xl overflow-hidden card-shadow">
+                        <div class="md:w-1/3 h-48 md:h-auto">
+                            <img src="https://image.qwenlm.ai/public_source/1e088336-9174-42eb-a174-686a1197c030/17f4197be-0ecf-48ee-a973-afd06572b599.png" alt="Kachori" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 md:w-2/3 flex flex-col justify-center">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="text-xl font-bold text-gray-900">قیمہ کچوری اسپیشل</h4>
+                                <span class="text-lg font-bold text-dairy-800">100 روپے</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">خاص مصالحے کے ساتھ تیار کردہ۔</p>
+                            <a href="https://wa.me/923280564431?text=Order%20Kachori" class="self-start px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded text-sm font-bold transition">آرڈر کریں</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">رابطہ کریں</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        کسی بھی آرڈر یا معلومات کے لیے ہم سے رابطہ کریں۔ ہم آپ کی خدمت کے لیے تیار ہیں۔
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 space-x-reverse">
+                            <div class="w-12 h-12 bg-dairy-100 rounded-full flex items-center justify-center flex-shrink-0 text-dairy-800 text-xl">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">پتہ</h4>
+                                <p class="text-gray-600">دھولانوال، لاہور، پاکستان</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 space-x-reverse">
+                            <div class="w-12 h-12 bg-dairy-100 rounded-full flex items-center justify-center flex-shrink-0 text-dairy-800 text-xl">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">واٹس ایپ / فون</h4>
+                                <p class="text-gray-600 dir-ltr text-right font-mono">+92 328 0564431</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 space-x-reverse">
+                            <div class="w-12 h-12 bg-dairy-100 rounded-full flex items-center justify-center flex-shrink-0 text-dairy-800 text-xl">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">اوقات کار</h4>
+                                <p class="text-gray-600">صبح 5:00 بجے سے رات تک (جب تک دکان کھلی ہو)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/923280564431" class="mt-8 inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition transform hover:-translate-y-1">
+                        <i class="fab fa-whatsapp ml-2"></i> واٹس ایپ پر میسج کریں
+                    </a>
+                </div>
+
+                <div class="h-96 bg-gray-200 rounded-xl overflow-hidden shadow-lg relative">
+                    <!-- Google Maps Embed Placeholder -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.56789!2d74.5!3d31.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMwJzAwLjAiTiA3NMKwMzAnMDAuMCJF!5e0!3m2!1sen!2s!4v1600000000000!5m2!1sen!2s" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        class="absolute inset-0 w-full h-full">
+                    </iframe>
+                    <div class="absolute bottom-4 right-4 bg-white p-2 rounded shadow text-xs text-gray-500">
+                        نقشہ (Dholanwal Area)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center items-center space-x-3 space-x-reverse mb-6">
+                <i class="fas fa-cow text-dairy-300 text-2xl"></i>
+                <h3 class="text-2xl font-bold">امیر الدین ملک شاپ</h3>
+            </div>
+            <p class="text-gray-400 mb-6 max-w-md mx-auto">
+                معیار، صفائی اور ذائقے کی ضمانت۔ دھولانوال کا پسندیدہ ڈیری اور ناشتہ پوائنٹ۔
+            </p>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    &copy; 2023 Ameer Ud Din Milk Shop. جملہ حقوق محفوظ ہیں۔
+                </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/923280564431" class="text-gray-400 hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+```
